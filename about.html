@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - EcoJourney Batanes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40">
+                        <circle cx="20" cy="20" r="18" fill="#2d5016"/>
+                        <path d="M20 8 Q15 15, 20 22 Q25 15, 20 8" fill="#6ba65c"/>
+                        <circle cx="20" cy="25" r="3" fill="#6ba65c"/>
+                        <path d="M18 28 L22 28 L21 32 L19 32 Z" fill="#4a7c3a"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">EcoJourney</span>
+                    <span class="logo-subtitle">Batanes</span>
+                </div>
+            </div>
+            <nav class="nav desktop-nav">
+                <a href="home.html">Home</a>
+                <a href="destinations.html">Destinations</a>
+                <a href="journal.html">Journal</a>
+                <a href="about.html" class="active">About</a>
+                <button class="badge-icon-btn" id="badgeIconBtn" title="View Badges">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="8" r="5"/>
+                        <path d="M12 13 L9 22 L12 20 L15 22 Z"/>
+                    </svg>
+                    <span class="badge-count" id="badgeCount">0</span>
+                </button>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="home.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="journal.html">Journal</a>
+        <a href="about.html" class="active">About</a>
+        <button class="mobile-badge-btn" id="mobileBadgeBtn">View Badges</button>
+    </nav>
+
+    <section class="page-hero about-hero">
+        <div class="container">
+            <h1>Our Story</h1>
+            <p>Preserving Batanes through sustainable tourism</p>
+        </div>
+    </section>
+
+    <section class="about-main">
+        <div class="container">
+            <div class="about-content-grid">
+                <div class="about-image">
+                    <img src="img/team.jpg" alt="EcoJourney Team">
+                </div>
+                <div class="about-text">
+                    <h2>The EcoJourney Mission</h2>
+                    <p>EcoJourney was born from a deep love for Batanes and a commitment to protect its extraordinary beauty. What started as a small group of passionate locals and environmentalists has grown into a movement dedicated to sustainable tourism.</p>
+                    
+                    <p>In 2024, we witnessed the increasing impact of tourism on our fragile island ecosystem. We realized that without intervention, the very beauty that attracts visitors could be lost forever. This urgency drove us to create EcoJourney.</p>
+                    
+                    <p>Our platform connects travelers with authentic, sustainable experiences while educating them about environmental stewardship. We work directly with local communities, ensuring tourism benefits residents and preserves Ivatan culture.</p>
+                    
+                    <p>Through partnerships with conservation groups, local businesses, and government agencies, we've established guidelines for responsible travel. Every visitor who chooses EcoJourney contributes to protecting Batanes for future generations.</p>
+                    
+                    <p>Today, we're proud to have helped thousands of travelers experience Batanes sustainably, while supporting local livelihoods and conservation efforts. But our journey has just begun.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Join Our Mission</h2>
+            <p>Be part of the movement to preserve Batanes through sustainable tourism</p>
+            <div class="cta-buttons">
+                <button class="cta-button primary" onclick="window.location.href='journal.html'">Share Your Story</button>
+                <button class="cta-button secondary" onclick="window.location.href='destinations.html'">Explore Destinations</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="badgeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Sustainability Badges</h2>
+            <p class="modal-subtitle">Achievements unlocked through eco-friendly actions</p>
+            <div class="badges-grid" id="badgesGrid"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 EcoJourney Batanes. Marimla, Allain Stephanie</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="5"/>
+                            <circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="2"/>
+                            <circle cx="17.5" cy="6.5" r="1.5" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

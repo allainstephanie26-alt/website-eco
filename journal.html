@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal - EcoJourney Batanes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40">
+                        <circle cx="20" cy="20" r="18" fill="#2d5016"/>
+                        <path d="M20 8 Q15 15, 20 22 Q25 15, 20 8" fill="#6ba65c"/>
+                        <circle cx="20" cy="25" r="3" fill="#6ba65c"/>
+                        <path d="M18 28 L22 28 L21 32 L19 32 Z" fill="#4a7c3a"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">EcoJourney</span>
+                    <span class="logo-subtitle">Batanes</span>
+                </div>
+            </div>
+            <nav class="nav desktop-nav">
+                <a href="home.html">Home</a>
+                <a href="destinations.html">Destinations</a>
+                <a href="journal.html" class="active">Journal</a>
+                <a href="about.html">About</a>
+                <button class="badge-icon-btn" id="badgeIconBtn" title="View Badges">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="8" r="5"/>
+                        <path d="M12 13 L9 22 L12 20 L15 22 Z"/>
+                    </svg>
+                    <span class="badge-count" id="badgeCount">0</span>
+                </button>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="home.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="journal.html" class="active">Journal</a>
+        <a href="about.html">About</a>
+        <button class="mobile-badge-btn" id="mobileBadgeBtn">View Badges</button>
+    </nav>
+
+    <section class="page-hero journal-hero">
+        <div class="container">
+            <h1>Share Your Eco-Journey</h1>
+            <p>Document your sustainable adventures and inspire fellow travelers</p>
+        </div>
+    </section>
+
+    <!-- Journal Form (now visible by default, no login needed) -->
+    <section class="journal-form-section" id="journalFormSection">
+        <div class="container">
+            <form class="journal-form" id="journalForm">
+                <h2>Tell Your Story</h2>
+
+                <div class="form-group">
+                    <label>Trip Title</label>
+                    <input type="text" name="planning" placeholder="Enter a title for your trip..." required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input type="text" name="location" placeholder="Which destination did you visit?" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Date</label>
+                        <input type="date" name="date" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Experience Type</label>
+                    <select name="experience-type" required>
+                        <option value="">Select experience type</option>
+                        <option value="adventure">Adventure & Exploration</option>
+                        <option value="cultural">Cultural Immersion</option>
+                        <option value="nature">Nature & Wildlife</option>
+                        <option value="community">Community Engagement</option>
+                        <option value="sustainable">Sustainable Living</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Your Experience</label>
+                    <textarea name="story" placeholder="Share your experience, what made it special, and your sustainable practices..." rows="8" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Sustainability Actions</label>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" name="actions" value="bike"> Used bike/walked</label>
+                        <label><input type="checkbox" name="actions" value="reusable"> Brought reusable items</label>
+                        <label><input type="checkbox" name="actions" value="local"> Supported local businesses</label>
+                        <label><input type="checkbox" name="actions" value="waste"> Zero waste practices</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Upload Photos</label>
+                    <div class="upload-area">
+                        <input type="file" id="fileUpload" name="photos" multiple accept="image/*">
+                        <label for="fileUpload" class="upload-label">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
+                            </svg>
+                            <span id="fileNames">Click to upload or drag photos here</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">Publish Story</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Community Stories Section -->
+    <section class="community-stories">
+        <div class="container">
+            <h2>Community Stories</h2>
+            <p class="section-subtitle">Real experiences from eco-conscious travelers</p>
+
+            <div class="stories-grid">
+                <article class="story-card">
+                    <img src="img/cycling.jpg" alt="Biking Through Batanes">
+                    <div class="story-content">
+                        <div class="story-header">
+                            <div class="author-info">
+                                <div class="author-avatar">M</div>
+                                <div>
+                                    <h4>Maria Santos</h4>
+                                    <span class="post-date">3 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Cycling Through Paradise</h3>
+                        <p>Exploring Batanes by bike was the most rewarding way to experience the islands. The rolling hills challenged me, but every view was worth it.</p>
+                        <div class="story-tags">
+                            <span class="tag">Adventure</span>
+                            <span class="tag">Eco-Friendly</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="story-card">
+                    <img src="img/homestay.jpg" alt="Batanes Homestay">
+                    <div class="story-content">
+                        <div class="author-info">
+                            <div class="author-avatar">J</div>
+                            <div>
+                                <h4>Juan Reyes</h4>
+                                <span class="post-date">1 week ago</span>
+                            </div>
+                        </div>
+                        <h3>Living with Local Families</h3>
+                        <p>Staying in an Ivatan homestay taught me sustainable practices I'll carry forever. The warmth and wisdom of the locals was incredible.</p>
+                        <div class="story-tags">
+                            <span class="tag">Cultural</span>
+                            <span class="tag">Community</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="story-card">
+                    <img src="img/cleaning.jpg" alt="Zero Waste Travel">
+                    <div class="story-content">
+                        <div class="author-info">
+                            <div class="author-avatar">S</div>
+                            <div>
+                                <h4>Sarah Chen</h4>
+                                <span class="post-date">2 weeks ago</span>
+                            </div>
+                        </div>
+                        <h3>Zero Waste Journey</h3>
+                        <p>I challenged myself to produce zero waste during my trip. With reusable containers and mindful choices, it was easier than I thought!</p>
+                        <div class="story-tags">
+                            <span class="tag">Sustainable</span>
+                            <span class="tag">Zero Waste</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Badges Modal -->
+    <div id="badgeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Sustainability Badges</h2>
+            <p class="modal-subtitle">Achievements unlocked through eco-friendly actions</p>
+            <div class="badges-grid" id="badgesGrid"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 EcoJourney Batanes. Marimla, Allain Stephanie</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="5"/>
+                            <circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="2"/>
+                            <circle cx="17.5" cy="6.5" r="1.5" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

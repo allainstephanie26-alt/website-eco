@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - EcoJourney Batanes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg width="40" height="40" viewBox="0 0 40 40">
+                        <circle cx="20" cy="20" r="18" fill="#2d5016"/>
+                        <path d="M20 8 Q15 15, 20 22 Q25 15, 20 8" fill="#6ba65c"/>
+                        <circle cx="20" cy="25" r="3" fill="#6ba65c"/>
+                        <path d="M18 28 L22 28 L21 32 L19 32 Z" fill="#4a7c3a"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-title">EcoJourney</span>
+                    <span class="logo-subtitle">Batanes</span>
+                </div>
+            </div>
+            <nav class="nav desktop-nav">
+                <a href="home.html">Home</a>
+                <a href="destinations.html" class="active">Destinations</a>
+                <a href="journal.html">Journal</a>
+                <a href="about.html">About</a>
+                <button class="badge-icon-btn" id="badgeIconBtn" title="View Badges">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="8" r="5"/>
+                        <path d="M12 13 L9 22 L12 20 L15 22 Z"/>
+                    </svg>
+                    <span class="badge-count" id="badgeCount">0</span>
+                </button>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <nav class="mobile-nav" id="mobileNav">
+        <a href="home.html">Home</a>
+        <a href="destinations.html" class="active">Destinations</a>
+        <a href="journal.html">Journal</a>
+        <a href="about.html">About</a>
+        <button class="mobile-badge-btn" id="mobileBadgeBtn">View Badges</button>
+    </nav>
+
+    <section class="page-hero destinations-hero">
+        <div class="container">
+            <h1>Explore Batanes Destinations</h1>
+            <p>Discover hidden gems, cultural treasures, and sustainable stays</p>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search destinations, places, activities...">
+                <button id="searchBtn">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M21 21l-4.35-4.35"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="destinations-main">
+        <div class="container">
+            <div class="destinations-layout">
+                <aside class="categories-sidebar">
+                    <h3>Categories</h3>
+                    <ul class="category-list">
+                        <li class="category-item active" data-category="all">All Destinations</li>
+                        <li class="category-item" data-category="nature">Hidden Gems</li>
+                        <li class="category-item" data-category="cultural">Cultural Sites</li>
+                        <li class="category-item" data-category="accommodations">Accommodations</li>
+                        <li class="category-item" data-category="activities">Go-To Places</li>
+                    </ul>
+                </aside>
+
+                <div class="destinations-content">
+                    <div class="destinations-grid">
+                        <div class="destination-card" data-category="nature">
+                            <img src="img/marlboro.jpg" alt="Marlboro Hills Batanes">
+                            <div class="card-content">
+                                <span class="category-badge">Hidden Gem</span>
+                                <h3>Marlboro Hills</h3>
+                                <p>Rolling green hills in Racuh a Payaman that resemble Marlboro Country advertisements. Best visited at sunrise for stunning golden-hour photography.</p>
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+
+                        <div class="destination-card" data-category="nature">
+                            <img src="img/valugan-beach.jpg" alt="Valugan Boulder Beach">
+                            <div class="card-content">
+                                <span class="category-badge">Hidden Gem</span>
+                                <h3>Valugan Boulder Beach</h3>
+                                <p>Unique beach covered with smooth andesite boulders formed by Mt. Iraya's eruption. Located in Basco, perfect for dramatic coastal photography.</p>
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+
+                        <div class="destination-card" data-category="cultural">
+                            <img src="img/chavayan.jpg" alt="Chavayan Village">
+                            <div class="card-content">
+                                <span class="category-badge">Cultural</span>
+                                <h3>Chavayan Village</h3>
+                                <p>Traditional Ivatan stone houses in Sabtang Island. A living museum showcasing centuries-old Ivatan architecture and culture.</p>
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+
+                        <div class="destination-card" data-category="cultural">
+                            <img src="img/basco.jpg" alt="Basco Lighthouse">
+                            <div class="card-content">
+                                <span class="category-badge">Cultural</span>
+                                <h3>Basco Lighthouse (Naidi Hills)</h3>
+                                <p>Historic white lighthouse built in 2003 offering 360-degree views of Basco town, Mt. Iraya, and the West Philippine Sea.</p>
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+
+                        <div class="destination-card" data-category="accommodations">
+                            <img src="img/fundation pacita.jpg" alt="Fundacion Pacita">
+                            <div class="card-content">
+                                <span class="category-badge">Stay</span>
+                                <h3>Fundacion Pacita</h3>
+                                <p>Eco-friendly boutique lodge in Basco with traditional stone walls, stunning views, and sustainable practices honoring local culture.</p>
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+
+                        <div class="destination-card" data-category="accommodations">
+                            <img src="img/Oldest_House_in_Ivatan.jpg" alt="Ivatan Homestay">
+                            <div class="card-content">
+                                <span class="category-badge">Stay</span>
+                                <h3>Ivatan Homestays</h3>
+                                <p>Authentic cultural immersion staying with local families in traditional stone houses. Experience genuine Ivatan hospitality and lifestyle.</p>
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+
+                        <div class="destination-card" data-category="activities">
+                            <img src="img/racuh.jpg" alt="Racuh a Payaman">
+                            <div class="card-content">
+                                <span class="category-badge">Go-To</span>
+                                <h3>Racuh a Payaman (Marlboro Country)</h3>
+                                <p>Vast pastureland with grazing cattle and dramatic coastal cliffs. One of the most photographed spots in Batanes.</p>
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+
+                        <div class="destination-card" data-category="activities">
+                            <img src="img/vayang.jpg" alt="Vayang Rolling Hills">
+                            <div class="card-content">
+                                <span class="category-badge">Go-To</span>
+                                <h3>Vayang Rolling Hills</h3>
+                                <p>Picturesque green hills in Basco perfect for hiking, picnics, and watching the sunrise. Offers panoramic island views.</p>
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+
+                        <div class="destination-card" data-category="cultural">
+                            <img src="img/honesty coffee.jpg" alt="Honesty Coffee Shop">
+                            <div class="card-content">
+                                <span class="category-badge">Cultural</span>
+                                <h3>Honesty Coffee Shop</h3>
+                                <p>Famous unmanned store where customers pay on honor system. Reflects the remarkable honesty and trust in Batanes culture.</p>
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+
+                        <div class="destination-card" data-category="nature">
+                            <img src="img/rock.jpg" alt="Alapad Rock Formation">
+                            <div class="card-content">
+                                <span class="category-badge">Hidden Gem</span>
+                                <h3>Alapad Rock Formation</h3>
+                                <p>Natural rock arch formation in Mahatao created by centuries of wave erosion. Spectacular for photography during low tide.</p>
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+
+                        <div class="destination-card" data-category="activities">
+                            <img src="img/sabtang.jpg" alt="Sabtang Island">
+                            <div class="card-content">
+                                <span class="category-badge">Go-To</span>
+                                <h3>Sabtang Island</h3>
+                                <p>Island accessible by falowa (traditional boat). Home to traditional villages, pristine beaches, and preserved Ivatan culture.</p>
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+
+                        <div class="destination-card" data-category="nature">
+                            <img src="img/chamantad.jpg" alt="Chamantad-Tinyan Viewpoint">
+                            <div class="card-content">
+                                <span class="category-badge">Hidden Gem</span>
+                                <h3>Chamantad-Tinyan Viewpoint</h3>
+                                <p>Breathtaking cliff-top viewpoint in Uyugan offering views of lush valleys, traditional villages, and the Pacific Ocean.</p>
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+
+                        <div class="destination-card" data-category="cultural">
+                            <img src="img/church.jpg" alt="San Carlos Borromeo Church">
+                            <div class="card-content">
+                                <span class="category-badge">Cultural</span>
+                                <h3>San Carlos Borromeo Church</h3>
+                                <p>Historic coral stone church in Mahatao built in 1787. One of the oldest and most beautiful churches in Batanes.</p>
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+
+                        <div class="destination-card" data-category="activities">
+                            <img src="img/blue lagoon.jpg" alt="Homoron Blue Lagoon">
+                            <div class="card-content">
+                                <span class="category-badge">Go-To</span>
+                                <h3>Homoron Blue Lagoon</h3>
+                                <p>Crystal-clear natural pool in Sabtang Island surrounded by dramatic rock formations. Perfect for swimming during calm weather.</p>
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+
+                        <div class="destination-card" data-category="nature">
+                            <img src="img/mount iraya.jpg" alt="Mount Iraya">
+                            <div class="card-content">
+                                <span class="category-badge">Hidden Gem</span>
+                                <h3>Mount Iraya</h3>
+                                <p>Active stratovolcano and highest peak in Batanes (1,009m). Challenging but rewarding climb with permits required from local government.</p>
+                                <button class="card-btn">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="badgeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Sustainability Badges</h2>
+            <p class="modal-subtitle">Achievements unlocked through eco-friendly actions</p>
+            <div class="badges-grid" id="badgesGrid"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 EcoJourney Batanes. Marimla, Allain Stephanie</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="5"/>
+                            <circle cx="12" cy="12" r="4" fill="none" stroke="white" stroke-width="2"/>
+                            <circle cx="17.5" cy="6.5" r="1.5" fill="white"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
